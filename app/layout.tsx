@@ -3,21 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://articial.tech"),
-  title: "Articial — Akbar's Portfolio",
+  title: "Articial — Akbar Alfa",
   description:
-    "Akbar's selected projects in web development, useful tools, and data exploration.",
+    "Akbar Alfa's multidisciplinary portfolio across web development, data, operations, marketing, and brand strategy.",
   openGraph: {
-    title: "Articial — Akbar's Portfolio",
-    description: "Building useful digital experiences.",
+    title: "Articial — Akbar Alfa",
+    description: "Digital systems for ideas that need to move.",
     url: "https://articial.tech",
     siteName: "Articial",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Articial — Akbar's developer portfolio" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Articial — Akbar Alfa's multidisciplinary portfolio" }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Articial — Akbar's Portfolio",
-    description: "Building useful digital experiences.",
+    title: "Articial — Akbar Alfa",
+    description: "Digital systems for ideas that need to move.",
     images: ["/og.png"],
   },
 };

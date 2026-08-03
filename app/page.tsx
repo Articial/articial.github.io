@@ -2,175 +2,236 @@ const projects = [
   {
     number: "01",
     title: "Autofix",
+    kicker: "Product / Web development",
     description:
-      "A TypeScript web application exploring a simpler, more direct vehicle-service experience.",
-    stack: "TypeScript · Web App",
+      "A clearer digital journey for vehicle service—from discovery to booking.",
+    stack: "TypeScript · Product thinking",
     href: "https://autofix-coral.vercel.app",
     source: "https://github.com/Articial/autofix",
+    tone: "light",
+    visual: "signal",
   },
   {
     number: "02",
-    title: "Chat Saver",
+    title: "BMW Market Clustering",
+    kicker: "Data / Market analysis",
     description:
-      "A JavaScript utility project for keeping conversations organized and easier to revisit.",
-    stack: "JavaScript · Utility",
-    href: "https://github.com/Articial/chat-saver",
-    source: "https://github.com/Articial/chat-saver",
+      "Market segments uncovered through hierarchical clustering across price, year, and mileage.",
+    stack: "Jupyter · Data analysis",
+    href: "https://github.com/Articial/Hierarchy-Clustering-Kelompok-2",
+    source: "https://github.com/Articial/Hierarchy-Clustering-Kelompok-2",
+    tone: "dark",
+    visual: "clusters",
   },
   {
     number: "03",
-    title: "Chickunyah",
+    title: "Chat Saver",
+    kicker: "Utility / Information design",
     description:
-      "A lightweight web experiment built with the fundamentals and shipped as a live experience.",
-    stack: "HTML · Frontend",
-    href: "https://chickunyah.vercel.app",
-    source: "https://github.com/Articial/chickunyah",
+      "A lightweight tool for keeping useful conversations organized and easy to revisit.",
+    stack: "JavaScript · Utility",
+    href: "https://github.com/Articial/chat-saver",
+    source: "https://github.com/Articial/chat-saver",
+    tone: "dark",
+    visual: "archive",
   },
   {
     number: "04",
-    title: "BMW Market Clustering",
+    title: "Chickunyah",
+    kicker: "Frontend / Web experiment",
     description:
-      "Market segmentation analysis using hierarchical clustering across price, production year, and mileage.",
-    stack: "Jupyter · Data Analysis",
-    href: "https://github.com/Articial/Hierarchy-Clustering-Kelompok-2",
-    source: "https://github.com/Articial/Hierarchy-Clustering-Kelompok-2",
+      "A playful web experiment built from the fundamentals and shipped as a live experience.",
+    stack: "HTML · Frontend",
+    href: "https://chickunyah.vercel.app",
+    source: "https://github.com/Articial/chickunyah",
+    tone: "light",
+    visual: "orbit",
   },
 ];
 
+const capabilities = [
+  {
+    index: "01",
+    title: "Product & Web",
+    copy: "Useful interfaces, thoughtful flows, and clean implementation from first idea to shipped page.",
+  },
+  {
+    index: "02",
+    title: "Data & Operations",
+    copy: "Analysis, data management, and systems that make information easier to act on.",
+  },
+  {
+    index: "03",
+    title: "Brand & Marketing",
+    copy: "Positioning, marketing analysis, and clear brand narratives grounded in real signals.",
+  },
+  {
+    index: "04",
+    title: "Project Direction",
+    copy: "Practical planning, structured collaboration, and momentum across moving parts.",
+  },
+];
+
+function Asterisk() {
+  return <span className="asterisk" aria-hidden="true">✳</span>;
+}
+
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Articial, back to top">
-          ARTICIAL<span className="wordmark-dot">.</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a
-          className="status"
-          href="https://github.com/Articial"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="status-dot" aria-hidden="true" />
-          Open to build
-        </a>
-      </header>
+    <main id="top">
+      <div className="page-frame">
+        <header className="site-header">
+          <a className="brand" href="#top" aria-label="Articial, back to top">
+            <Asterisk />
+            <span>Articial</span>
+          </a>
+          <nav aria-label="Main navigation">
+            <a href="#work">Work</a>
+            <a href="#services">Expertise</a>
+            <a href="#about">About</a>
+          </nav>
+          <a className="header-cta" href="#contact">
+            Start a conversation <span aria-hidden="true">↗</span>
+          </a>
+        </header>
 
-      <section className="hero" id="top">
-        <p className="eyebrow">Akbar · Developer / Builder</p>
-        <h1>
-          Digital ideas,
-          <br />
-          <span>built to work.</span>
-        </h1>
-        <div className="hero-bottom">
-          <p className="intro">
-            I turn ideas into useful digital experiences—combining clean code,
-            thoughtful interfaces, and a bias toward shipping.
+        <section className="hero" aria-labelledby="hero-title">
+          <div className="hero-meta">
+            <p><span className="red-square" /> Independent digital practice</p>
+            <p>Jakarta · Indonesia</p>
+          </div>
+          <h1 id="hero-title">
+            Digital systems
+            <span>for ideas that</span>
+            need to move.
+          </h1>
+          <div className="hero-foot">
+            <p className="hero-intro">
+              I&apos;m Akbar—a multidisciplinary builder working across web,
+              data, operations, and brand strategy.
+            </p>
+            <a className="circle-button" href="#work" aria-label="Explore selected work">
+              <span>Explore</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <div className="hero-grid-mark" aria-hidden="true">
+            <span /><span /><span /><span />
+          </div>
+        </section>
+
+        <div className="discipline-strip" aria-label="Professional disciplines">
+          <p><span>01</span> Web development</p>
+          <p><span>02</span> Data & operations</p>
+          <p><span>03</span> Marketing analysis</p>
+          <p><span>04</span> Brand strategy</p>
+        </div>
+
+        <section className="statement" id="about">
+          <div className="section-label">
+            <span className="red-square" /> Who I am
+          </div>
+          <p className="statement-copy">
+            I connect <strong>technology</strong>, information, and strategy to
+            turn scattered ideas into <em>clear digital outcomes.</em>
           </p>
-          <a className="round-link" href="#work" aria-label="Explore selected work">
-            <span>Explore</span>
-            <span className="arrow" aria-hidden="true">↓</span>
-          </a>
-        </div>
-        <div className="hero-orbit" aria-hidden="true">
-          <span className="orbit-dot" />
-        </div>
-      </section>
+          <div className="statement-notes">
+            <p>Curious by nature. Practical by choice.</p>
+            <p>
+              The work can be a website, an analysis, a process, or a sharper
+              story. The principle stays the same: make it useful and make it clear.
+            </p>
+          </div>
+        </section>
 
-      <div className="ticker" aria-hidden="true">
-        <div>
-          DESIGN WITH INTENT <span>✦</span> BUILD WITH PURPOSE <span>✦</span>
-          SHIP WHAT MATTERS <span>✦</span> DESIGN WITH INTENT <span>✦</span>
-        </div>
+        <section className="work" id="work">
+          <div className="work-heading">
+            <div>
+              <div className="section-label"><span className="red-square" /> Selected work</div>
+              <h2>Built with intent.</h2>
+            </div>
+            <p>Four selected explorations across products, data, and the web.</p>
+          </div>
+
+          <div className="project-grid">
+            {projects.map((project) => (
+              <article className={`project-card ${project.tone}`} key={project.title}>
+                <div className="project-topline">
+                  <span>{project.number}</span>
+                  <p>{project.kicker}</p>
+                  <span>2026</span>
+                </div>
+                <div className={`project-visual ${project.visual}`} aria-hidden="true">
+                  {project.visual === "signal" && <><i /><i /><i /><i /></>}
+                  {project.visual === "clusters" && <><i /><i /><i /><i /></>}
+                  {project.visual === "archive" && <><i>KEEP</i><i>FIND</i><i>RETURN</i></>}
+                  {project.visual === "orbit" && <><i /><i /><i /></>}
+                </div>
+                <div className="project-body">
+                  <div>
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                  </div>
+                  <p className="project-stack">{project.stack}</p>
+                </div>
+                <div className="project-links">
+                  <a href={project.source} target="_blank" rel="noreferrer">Source <span>↗</span></a>
+                  {project.href !== project.source && (
+                    <a href={project.href} target="_blank" rel="noreferrer">View live <span>↗</span></a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="services" id="services">
+          <div className="services-intro">
+            <div className="section-label"><span className="red-square" /> Areas of practice</div>
+            <h2>One perspective.<br />Multiple lenses.</h2>
+            <p>
+              The best work rarely fits in one job title. I move between making,
+              measuring, organizing, and communicating.
+            </p>
+          </div>
+          <div className="capability-grid">
+            {capabilities.map((item) => (
+              <article key={item.index}>
+                <span>{item.index}</span>
+                <Asterisk />
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="numbers" aria-label="Working principles">
+          <div className="section-label"><span className="red-square" /> By the numbers</div>
+          <div className="numbers-grid">
+            <article><strong>01</strong><h3>Clear direction</h3><p>One shared definition of what good looks like.</p></article>
+            <article><strong>04</strong><h3>Connected disciplines</h3><p>Technology, data, operations, and brand.</p></article>
+            <article><strong>100%</strong><h3>Bias to shipping</h3><p>Ideas become real when they reach people.</p></article>
+          </div>
+        </section>
+
+        <section className="contact" id="contact">
+          <div className="contact-mark"><Asterisk /></div>
+          <div>
+            <p>Have a useful problem to solve?</p>
+            <h2>Let&apos;s make it<br />clear—and real.</h2>
+          </div>
+          <a href="https://github.com/Articial" target="_blank" rel="noreferrer">
+            Start on GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+        <footer>
+          <a className="brand" href="#top"><Asterisk /><span>Articial</span></a>
+          <p>Akbar Alfa · Multidisciplinary digital builder</p>
+          <p>© {new Date().getFullYear()} · Jakarta</p>
+        </footer>
       </div>
-
-      <section className="work section-shell" id="work">
-        <div className="section-heading">
-          <p className="section-index">01 / Selected work</p>
-          <h2>Things I&apos;ve made.</h2>
-        </div>
-
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project" key={project.title}>
-              <span className="project-number">{project.number}</span>
-              <div className="project-copy">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-              <p className="project-stack">{project.stack}</p>
-              <div className="project-actions">
-                <a href={project.source} target="_blank" rel="noreferrer">
-                  Code <span aria-hidden="true">↗</span>
-                </a>
-                {project.href !== project.source && (
-                  <a href={project.href} target="_blank" rel="noreferrer">
-                    Live <span aria-hidden="true">↗</span>
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="about section-shell" id="about">
-        <p className="section-index">02 / About</p>
-        <div className="about-grid">
-          <h2>
-            Curious by nature.
-            <br />
-            Practical by choice.
-          </h2>
-          <div className="about-copy">
-            <p>
-              I&apos;m Akbar, a developer working under the name Articial. I enjoy
-              taking an early idea, finding the clearest version of it, and
-              bringing it all the way to the web.
-            </p>
-            <p>
-              My projects move between frontend development, useful tools, and
-              data exploration. The common thread is simple: learn fast, make
-              deliberately, and leave things better than I found them.
-            </p>
-          </div>
-          <div className="capabilities">
-            <p>Currently exploring</p>
-            <ul>
-              <li>Web Development</li>
-              <li>Product Thinking</li>
-              <li>Data Exploration</li>
-              <li>Creative Technology</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact section-shell" id="contact">
-        <p className="section-index">03 / Contact</p>
-        <div className="contact-grid">
-          <h2>Have an idea?</h2>
-          <a
-            className="contact-link"
-            href="https://github.com/Articial"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Let&apos;s build it <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-
-      <footer>
-        <a href="#top">ARTICIAL.</a>
-        <p>Built with intention · Jakarta, Indonesia</p>
-        <p>© {new Date().getFullYear()} Akbar</p>
-      </footer>
     </main>
   );
 }
