@@ -11,4 +11,5 @@ npm run dev
 
 ## GitHub Pages
 
-Every push to `main` is built and deployed automatically through GitHub Actions.
+The production-ready static export is published from the `docs` directory on
+the `main` branch.
